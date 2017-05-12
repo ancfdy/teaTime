@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_popwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/btn_performance_statistics_img" />
+
+    <TextView
+        android:id="@+id/tv_popwin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="123"
+        android:textColor="#000"
+        android:singleLine="true"
+        android:textSize="@dimen/common_text_size_middle"
+        android:layout_marginLeft="10dp"
+         />
+
+</LinearLayout>
