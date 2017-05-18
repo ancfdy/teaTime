@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.utils;
+package com.teatime.library_teatime.Utils;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -10,7 +10,7 @@ import android.view.View;
 /**
  * Created by Jing on 15/5/18.
  */
-public class UIUtils {
+public class Utils_Flyrefresh {
 
     public static final int dpToPx(int dp) {
         return (int) (dp * Resources.getSystem().getDisplayMetrics().density);

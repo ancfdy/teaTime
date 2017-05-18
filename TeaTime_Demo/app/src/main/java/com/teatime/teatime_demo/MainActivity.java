@@ -1,8 +1,6 @@
 package com.teatime.teatime_demo;
 
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -41,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements FlyRefreshLayout.
         res.add("长得");
         listview.setAdapter(myAdapter);
         mFlylayout.setOnPullRefreshListener(this);
-
+        mFlylayout.setBackgroundResource(R.mipmap.ic_launcher);
         View actionButton = mFlylayout.getHeaderActionButton();
         if (actionButton != null) {
             actionButton.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements FlyRefreshLayout.
 
     @Override
     public void onRefresh(FlyRefreshLayout view) {
-//        bounceAnimateView(view);
         res.add("ssds");
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -67,8 +63,6 @@ public class MainActivity extends AppCompatActivity implements FlyRefreshLayout.
                 myAdapter.notifyDataSetChanged();
             }
         }, 2000);
-//        mFlylayout.onRefreshFinish();
-//        myAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -123,16 +117,7 @@ public class MainActivity extends AppCompatActivity implements FlyRefreshLayout.
     }
 
 
-    private void bounceAnimateView(View view) {
-        if (view == null) {
-            return;
-        }
 
-        Animator swing = ObjectAnimator.ofFloat(view, "rotationX", 0, 30, -20, 0);
-        swing.setDuration(400);
-        swing.setInterpolator(new AccelerateInterpolator());
-        swing.start();
-    }
 
 
 }

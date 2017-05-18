@@ -12,9 +12,10 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 
 import com.teatime.library_teatime.R;
+import com.teatime.library_teatime.Utils.Utils_Flyrefresh;
 import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.MountanScenceView;
 import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.SimpleAnimatorListener;
-import com.teatime.library_teatime.View.flyrefresh.utils.UIUtils;
+
 
 /**
  * Created by jing on 15-5-27.
@@ -63,7 +64,7 @@ public class FlyRefreshLayout extends PullHeaderLayout {
         }
 
         final View iconView = getIconView();
-        UIUtils.clearAnimator(iconView);
+        Utils_Flyrefresh.clearAnimator(iconView);
 
         AnimatorSet flyUpAnim = new AnimatorSet();
         flyUpAnim.setDuration(800);
@@ -100,10 +101,10 @@ public class FlyRefreshLayout extends PullHeaderLayout {
         }
 
         final View iconView = getIconView();
-        UIUtils.clearAnimator(iconView);
+        Utils_Flyrefresh.clearAnimator(iconView);
 
         final int offDistX = -iconView.getRight();
-        final int offDistY = -UIUtils.dpToPx(10);
+        final int offDistY = -Utils_Flyrefresh.dpToPx(10);
         AnimatorSet flyDownAnim = new AnimatorSet();
         flyDownAnim.setDuration(800);
         ObjectAnimator transX1 = ObjectAnimator.ofFloat(iconView, "translationX", getWidth(), offDistX);
