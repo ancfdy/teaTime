@@ -29,9 +29,9 @@ import android.view.ViewParent;
 import android.widget.ImageView;
 
 import com.teatime.library_teatime.R;
+import com.teatime.library_teatime.Utils.Utils_Flyrefresh;
 import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.ElasticOutInterpolator;
 import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.SimpleAnimatorListener;
-import com.teatime.library_teatime.View.flyrefresh.utils.UIUtils;
 
 
 /**
@@ -47,11 +47,11 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
     public static final int STATE_FLING = 2;
     public static final int STATE_BOUNCE = 3;
 
-    final static int ACTION_BUTTON_CENTER = UIUtils.dpToPx(40);
-    final static int ACTION_ICON_SIZE = UIUtils.dpToPx(32);
-    private final static int DEFAULT_EXPAND = UIUtils.dpToPx(300);
-    private final static int DEFAULT_HEIGHT = UIUtils.dpToPx(240);
-    private final static int DEFAULT_SHRINK = UIUtils.dpToPx(48);
+    final static int ACTION_BUTTON_CENTER = Utils_Flyrefresh.dpToPx(40);
+    final static int ACTION_ICON_SIZE = Utils_Flyrefresh.dpToPx(32);
+    private final static int DEFAULT_EXPAND = Utils_Flyrefresh.dpToPx(300);
+    private final static int DEFAULT_HEIGHT = Utils_Flyrefresh.dpToPx(240);
+    private final static int DEFAULT_SHRINK = Utils_Flyrefresh.dpToPx(48);
 
     private int mHeaderId = 0;
     private int mContentId = 0;
@@ -271,8 +271,8 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
         mActionDrawable = actionDrawable;
         if (mActionDrawable != null) {
             if (mActionView == null) {
-                final int bgColor = UIUtils.getThemeColorFromAttrOrRes(getContext(), R.attr.colorAccent, R.color.accent);
-                final int pressedColor = UIUtils.darkerColor(bgColor, 0.8f);
+                final int bgColor = Utils_Flyrefresh.getThemeColorFromAttrOrRes(getContext(), R.attr.colorAccent, R.color.accent);
+                final int pressedColor = Utils_Flyrefresh.darkerColor(bgColor, 0.8f);
 
                 final ShapeDrawable bgDrawable = new ShapeDrawable(new OvalShape());
                 bgDrawable.getPaint().setColor(bgColor);
