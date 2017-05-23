@@ -7,7 +7,7 @@
         android:id="@+id/fly_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".UI.MainActivity">
         <ListView
             android:id="@+id/lv_show"
             android:layout_width="match_parent"

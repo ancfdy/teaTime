@@ -1,4 +1,4 @@
-package com.teatime.teatime_demo;
+package com.teatime.teatime_demo.UI;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -7,6 +7,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
+
+import com.teatime.teatime_demo.R;
 
 import jp.wasabeef.recyclerview.animators.BaseItemAnimator;
 

@@ -1,4 +1,4 @@
-package com.teatime.teatime_demo;
+package com.teatime.teatime_demo.UI;
 
 
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.teatime.library_teatime.View.flyrefresh.flyrefresh.FlyRefreshLayout;
+import com.teatime.teatime_demo.R;
 
 import java.util.ArrayList;
 
