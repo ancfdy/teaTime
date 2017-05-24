@@ -7,5 +7,12 @@
         <attr name="phl_header" format="reference" />
         <attr name="phl_content" format="reference" />
         <attr name="phl_action" format="reference" />
+
     </declare-styleable>
+    <declare-styleable name="RefreshView">
+        <attr name="type" format="enum">
+            <enum name="sun" value="0" />
+        </attr>
+    </declare-styleable>
+
 </resources>

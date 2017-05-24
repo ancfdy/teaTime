@@ -77,7 +77,7 @@ public class ViewAnimator<T extends Resourceble> {
                         animateView((int) position);
                     }
                     if (position == viewList.size() - 1) {
-                        screenShotable.takeScreenShot();
+//                        screenShotable.takeScreenShot();
                         setViewsClickable(true);
                     }
                 }

@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.teatime.library_teatime.View.SwitchButton;
 import com.teatime.library_teatime.interfaces.ScreenShotable;
 import com.teatime.teatime_demo.R;
 
@@ -18,21 +20,43 @@ import com.teatime.teatime_demo.R;
 
 public class OneFragment extends Fragment implements ScreenShotable {
 
-
-    public  OneFragment newInstance(int resId) {
-        OneFragment contentFragment = new OneFragment();
-        Bundle bundle = new Bundle();
-        bundle.putInt(Integer.class.getName(), resId);
-        contentFragment.setArguments(bundle);
-        return contentFragment;
-    }
+private SwitchButton switchButton;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
            super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.one, container,false);
+        IntView(view);
+
+
         return  view;
+    }
+
+    private void IntView(View view) {
+        switchButton = (SwitchButton) view.findViewById(R.id.switch_button);
+
+        switchButton.setChecked(true);
+        switchButton.isChecked();
+        switchButton.toggle();     //switch state
+        switchButton.toggle(true);//switch without animation
+        switchButton.setShadowEffect(true);//是否有阴影
+        switchButton.setEnabled(false);//disable button
+        switchButton.setEnableEffect(false);//开关动画
+        switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(SwitchButton view, boolean isChecked) {
+                //TODO do your job
+                String on;
+                if (isChecked){
+                    on="对";
+                }else {
+
+                    on="错";
+                }
+                Toast.makeText(getContext(),on,Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
