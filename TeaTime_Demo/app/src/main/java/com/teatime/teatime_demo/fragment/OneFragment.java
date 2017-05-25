@@ -39,10 +39,10 @@ private SwitchButton switchButton;
         switchButton.setChecked(true);
         switchButton.isChecked();
         switchButton.toggle();     //switch state
-        switchButton.toggle(true);//switch without animation
+        switchButton.toggle(false);//switch without animation
         switchButton.setShadowEffect(true);//是否有阴影
-        switchButton.setEnabled(false);//disable button
-        switchButton.setEnableEffect(false);//开关动画
+        switchButton.setEnabled(true);//disable button
+        switchButton.setEnableEffect(true);//开关动画
         switchButton.setOnCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(SwitchButton view, boolean isChecked) {
