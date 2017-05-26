@@ -24,6 +24,7 @@ import com.teatime.library_teatime.model.SlideMenuItem;
 import com.teatime.teatime_demo.R;
 import com.teatime.teatime_demo.fragment.ContentFragment;
 import com.teatime.teatime_demo.fragment.OneFragment;
+import com.teatime.teatime_demo.fragment.ReFreshFragment;
 import com.teatime.teatime_demo.fragment.TwoFragment;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
     private FragmentTransaction transaction;
     private OneFragment oneFragment;
     private TwoFragment twoFragment;
+    private ReFreshFragment reFreshfragment;
     private FragmentManager fragmentManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +75,12 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         transaction = fragmentManager.beginTransaction();
         oneFragment=new OneFragment();
         twoFragment=new TwoFragment();
+        reFreshfragment=new ReFreshFragment();
 
         transaction.add(R.id.content_frame, oneFragment, ContentFragment.BUILDING);
         transaction.add(R.id.content_frame, twoFragment, ContentFragment.BOOK);
-        transaction.show(oneFragment).hide(twoFragment);
+        transaction.add(R.id.content_frame, reFreshfragment, ContentFragment.PAINT);
+        transaction.show(oneFragment).hide(twoFragment).hide(reFreshfragment);
         transaction.commit();
     }
 
@@ -182,7 +186,7 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
 
 
 
-        transaction.hide(oneFragment).hide(twoFragment);
+        transaction.hide(oneFragment).hide(twoFragment).hide(reFreshfragment);
         transaction.commit();
     }
 
@@ -206,6 +210,13 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
                 transaction.show(twoFragment);
                 transaction.commit();
                 return twoFragment;
+            case ContentFragment.PAINT:
+
+                transaction.show(twoFragment);
+                transaction.commit();
+//                transaction.show(reFreshfragment);
+//                transaction.commit();
+                return reFreshfragment;
 
             default:
                 return null;

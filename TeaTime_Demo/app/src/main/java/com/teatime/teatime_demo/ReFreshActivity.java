@@ -27,7 +27,7 @@ public class ReFreshActivity extends AppCompatActivity {
                     public void run() {
                         mPullToRefreshView.setRefreshing(false);
                     }
-                }, 5000);
+                }, 1000);
             }
         });
 
