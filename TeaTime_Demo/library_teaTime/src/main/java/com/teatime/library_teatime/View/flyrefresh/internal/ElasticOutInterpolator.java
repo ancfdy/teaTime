@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal;
+package com.teatime.library_teatime.View.flyrefresh.internal;
 
 import android.view.animation.Interpolator;
 

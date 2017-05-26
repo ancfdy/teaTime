@@ -1,10 +1,11 @@
-package com.teatime.teatime_demo;
+package com.teatime.teatime_demo.UI.Activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.teatime.library_teatime.View.Phoenix_Refresh.PullToRefreshView;
+import com.teatime.teatime_demo.R;
 
 
 /**

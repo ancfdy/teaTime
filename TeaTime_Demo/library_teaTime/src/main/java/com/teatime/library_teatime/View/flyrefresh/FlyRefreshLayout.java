@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh;
+package com.teatime.library_teatime.View.flyrefresh;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -13,8 +13,8 @@ import android.view.animation.DecelerateInterpolator;
 
 import com.teatime.library_teatime.R;
 import com.teatime.library_teatime.Utils.Utils_Flyrefresh;
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.MountanScenceView;
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.SimpleAnimatorListener;
+import com.teatime.library_teatime.View.flyrefresh.internal.MountanScenceView;
+import com.teatime.library_teatime.View.flyrefresh.internal.SimpleAnimatorListener;
 
 
 /**

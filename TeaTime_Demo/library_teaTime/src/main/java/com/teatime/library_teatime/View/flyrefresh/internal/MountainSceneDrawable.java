@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal;
+package com.teatime.library_teatime.View.flyrefresh.internal;
 
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -12,7 +12,7 @@ import android.graphics.drawable.Drawable;
 import android.support.v4.view.animation.PathInterpolatorCompat;
 import android.view.animation.Interpolator;
 
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.PullHeaderLayout;
+import com.teatime.library_teatime.View.flyrefresh.PullHeaderLayout;
 
 
 /**

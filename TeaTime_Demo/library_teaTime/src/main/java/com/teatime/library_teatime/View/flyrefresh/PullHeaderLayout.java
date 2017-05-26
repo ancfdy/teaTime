@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh;
+package com.teatime.library_teatime.View.flyrefresh;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -30,8 +30,8 @@ import android.widget.ImageView;
 
 import com.teatime.library_teatime.R;
 import com.teatime.library_teatime.Utils.Utils_Flyrefresh;
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.ElasticOutInterpolator;
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal.SimpleAnimatorListener;
+import com.teatime.library_teatime.View.flyrefresh.internal.ElasticOutInterpolator;
+import com.teatime.library_teatime.View.flyrefresh.internal.SimpleAnimatorListener;
 
 
 /**

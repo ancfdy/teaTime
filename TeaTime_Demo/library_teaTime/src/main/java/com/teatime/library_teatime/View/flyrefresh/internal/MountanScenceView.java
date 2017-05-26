@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh.internal;
+package com.teatime.library_teatime.View.flyrefresh.internal;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -14,8 +14,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Interpolator;
 
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.IPullHeader;
-import com.teatime.library_teatime.View.flyrefresh.flyrefresh.PullHeaderLayout;
+import com.teatime.library_teatime.View.flyrefresh.IPullHeader;
+import com.teatime.library_teatime.View.flyrefresh.PullHeaderLayout;
 
 
 /**

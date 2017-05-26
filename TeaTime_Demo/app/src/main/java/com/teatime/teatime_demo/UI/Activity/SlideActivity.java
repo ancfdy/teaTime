@@ -1,6 +1,7 @@
-package com.teatime.teatime_demo.UI;
+package com.teatime.teatime_demo.UI.Activity;
 
 /**
+ * 主页面，左侧菜单
  * Created by HG on 2017/5/18.
  */
 

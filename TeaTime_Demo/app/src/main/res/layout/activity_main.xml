@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.teatime.library_teatime.View.flyrefresh.flyrefresh.FlyRefreshLayout
+    <com.teatime.library_teatime.View.flyrefresh.FlyRefreshLayout
         android:id="@+id/fly_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,7 +15,7 @@
             android:paddingTop="24dp"
             android:background="#FFFFFF"/>
 
-    </com.teatime.library_teatime.View.flyrefresh.flyrefresh.FlyRefreshLayout>
+    </com.teatime.library_teatime.View.flyrefresh.FlyRefreshLayout>
 
 
 

@@ -1,4 +1,4 @@
-package com.teatime.library_teatime.View.flyrefresh.flyrefresh;
+package com.teatime.library_teatime.View.flyrefresh;
 
 /**
  * Created by jing on 15-5-19.
