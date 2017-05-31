@@ -92,7 +92,7 @@ public class PullToRefreshView extends ViewGroup {
     }
 
     /**
-     * This method sets padding for the refresh (progress) view.
+     * 此方法为刷新（进度）视图设置填充。
      */
     public void setRefreshViewPadding(int left, int top, int right, int bottom) {
         mRefreshView.setPadding(left, top, right, bottom);

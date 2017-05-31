@@ -8,4 +8,9 @@
     <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
+
+
+    <color name="white">#ffffffff</color>
+    <color name="gray">#e0e0e0</color>
+    <color name="transparency">#00000000</color>
 </resources>

@@ -7,7 +7,7 @@ public final class Logger {
     private static final String TAG = "Phoenix";
 
     /**
-     * Set true or false if you want read logs or not
+     * 如果您想要读取日志，请设置true或false
      */
     private static boolean logEnabled_d = false;
     private static boolean logEnabled_i = false;

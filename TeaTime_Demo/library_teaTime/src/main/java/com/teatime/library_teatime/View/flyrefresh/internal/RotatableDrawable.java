@@ -13,9 +13,9 @@ public class RotatableDrawable extends LayerDrawable {
     private float mDegree = 0;
 
     /**
-     * Create a new layer drawable with the list of specified layers.
+     * 使用指定图层的列表创建一个可绘制的新图层。
      *
-     * @param layers A list of drawables to use as layers in this new drawable.
+     * @param layers 在此新绘图中用作图层的可绘制列表。
      */
     public RotatableDrawable(Drawable[] layers) {
         super(layers);

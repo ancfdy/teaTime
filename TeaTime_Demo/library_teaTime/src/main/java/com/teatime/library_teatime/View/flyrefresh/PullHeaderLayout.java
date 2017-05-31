@@ -499,7 +499,7 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
             case MotionEvent.ACTION_MOVE: {
                 final int activePointerId = mActivePointerId;
                 if (activePointerId == INVALID_POINTER) {
-                    // If we don't have a valid id, the touch down wasn't on content.
+                    // 如果我们没有有效的ID，则触摸屏不会显示内容。
                     break;
                 }
 
@@ -530,7 +530,7 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
                 final int y = (int) ev.getY();
 
                 /*
-                 * Remember location of down touch.
+                 * 记住下触的位置。
                  * ACTION_DOWN always refers to pointer index 0.
                  */
                 mLastMotionY = y;
@@ -542,6 +542,8 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
                 * If being flinged and user touches the screen, initiate drag;
                 * otherwise don't.  mScroller.isFinished should be false when
                 * being flinged.
+                * 如果被屏蔽，用户触摸屏幕，则启动拖动，否则不要。 mScroller.isFinished应该是false
+                *被甩了
                 */
                 mIsBeingDragged = !mScroller.isFinished();
                 startNestedScroll(ViewCompat.SCROLL_AXIS_VERTICAL);
@@ -597,6 +599,8 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
                 /*
                  * If being flinged and user touches, stop the fling. isFinished
                  * will be false if being flinged.
+                 * 如果被甩掉和用户触摸，停止逃跑。 结束了
+                  *如果被逃跑将是假的。
                  */
                 if (!mScroller.isFinished()) {
                     mScroller.abortAnimation();
@@ -636,7 +640,7 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
                     }
                 }
                 if (mIsBeingDragged) {
-                    // Scroll to follow the motion event
+                    // 滚动以跟随运动事件
                     mLastMotionY = y - mScrollOffset[1];
 
                     final int scrolledDeltaY = moveBy(deltaY);
@@ -692,11 +696,14 @@ public class PullHeaderLayout extends ViewGroup implements NestedScrollingParent
     protected void onMoveHeader(int state, float progress) {}
 
     /**
-     * Fling the scroll view
+     * 滚动视图
      *
      * @param velocityY The initial velocity in the Y direction. Positive
      *                  numbers mean that the finger/cursor is moving down the screen,
      *                  which means we want to scroll towards the top.
+     *                  初始速度在Y方向。 正数意味着手指/光标向下移动屏幕，
+     *                  这意味着我们要滚动到顶部。
+     *
      */
     public void fling(int velocityY) {
         mPullState = STATE_FLING;

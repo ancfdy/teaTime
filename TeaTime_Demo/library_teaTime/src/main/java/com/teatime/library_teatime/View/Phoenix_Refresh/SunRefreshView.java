@@ -160,8 +160,8 @@ public class SunRefreshView extends BaseRefreshView implements Animatable {
 
         float offsetX = -(mScreenWidth * skyScale - mScreenWidth) / 2.0f;
         float offsetY = (1.0f - dragPercent) * mParent.getTotalDragDistance() - mSkyTopOffset // Offset canvas moving
-                - mSkyHeight * (skyScale - 1.0f) / 2 // Offset sky scaling
-                + mSkyMoveOffset * dragPercent; // Give it a little move top -> bottom
+                - mSkyHeight * (skyScale - 1.0f) / 2 // 偏移天空缩放
+                + mSkyMoveOffset * dragPercent; // 给它一点点顶部 - >底部
 
         matrix.postScale(skyScale, skyScale);
         matrix.postTranslate(offsetX, offsetY);
@@ -195,10 +195,10 @@ public class SunRefreshView extends BaseRefreshView implements Animatable {
         }
 
         float offsetX = -(mScreenWidth * townScale - mScreenWidth) / 2.0f;
-        float offsetY = (1.0f - dragPercent) * mParent.getTotalDragDistance() // Offset canvas moving
+        float offsetY = (1.0f - dragPercent) * mParent.getTotalDragDistance() // 胶印移动
                 + townTopOffset
-                - mTownHeight * (townScale - 1.0f) / 2 // Offset town scaling
-                + townMoveOffset; // Give it a little move
+                - mTownHeight * (townScale - 1.0f) / 2 // 抵消城镇扩张
+                + townMoveOffset; // 给它一点动作
 
         matrix.postScale(townScale, townScale);
         matrix.postTranslate(offsetX, offsetY);
@@ -211,7 +211,7 @@ public class SunRefreshView extends BaseRefreshView implements Animatable {
         matrix.reset();
 
         float dragPercent = mPercent;
-        if (dragPercent > 1.0f) { // Slow down if pulling over set height
+        if (dragPercent > 1.0f) { // 如果拉高设定高度则减速
             dragPercent = (dragPercent + 9.0f) / 10;
         }
 
@@ -220,8 +220,8 @@ public class SunRefreshView extends BaseRefreshView implements Animatable {
 
         float offsetX = mSunLeftOffset;
         float offsetY = mSunTopOffset
-                + (mParent.getTotalDragDistance() / 2) * (1.0f - dragPercent) // Move the sun up
-                - mTop; // Depending on Canvas position
+                + (mParent.getTotalDragDistance() / 2) * (1.0f - dragPercent) // 向上移动太阳
+                - mTop; // 取决于画布位置
 
         float scalePercentDelta = dragPercent - SCALE_START_PERCENT;
         if (scalePercentDelta > 0) {

@@ -69,7 +69,7 @@ public class HeaderController {
     }
 
     /**
-     * Check if can scroll down to show top
+     * 检查是否可以向下滚动以显示顶部
      * @return
      */
     public boolean canScrollDown() {
@@ -77,7 +77,7 @@ public class HeaderController {
     }
 
     /**
-     * Check if can scroll up to show bottom
+     * 检查是否可以向上滚动显示底部
      * @return
      */
     public boolean canScrollUp() {

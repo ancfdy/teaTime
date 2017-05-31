@@ -1,0 +1,38 @@
+package Practise.IOPractise;
+
+import java.io.FilterOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.security.MessageDigest;
+
+public class StringDigestOutputStream extends FilterOutputStream {
+
+    private MessageDigest messageDigest;
+
+    public MessageDigest getMessageDigest() {
+        return messageDigest;
+    }
+
+    public void setMessageDigest(MessageDigest messageDigest) {
+        this.messageDigest = messageDigest;
+    }
+
+    /**
+     * Creates an output stream filter built on top of the specified
+     * underlying output stream.
+     *
+     * @param out the underlying output stream to be assigned to
+     *            the field <tt>this.out</tt> for later use, or
+     *            <code>null</code> if this instance is to be
+     *            created without an underlying stream.
+     */
+    public StringDigestOutputStream(OutputStream out, MessageDigest messageDigest) {
+        super(out);
+        setMessageDigest(messageDigest);
+    }
+
+    public void write(String s) throws IOException {
+        out.write(s.getBytes());
+        messageDigest.update((s + "\n").getBytes());
+    }
+}

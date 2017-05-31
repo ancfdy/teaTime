@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PicTest</string>
+    <string name="takepic">拍摄</string>
+</resources>

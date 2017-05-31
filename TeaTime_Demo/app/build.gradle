@@ -31,4 +31,5 @@ dependencies {
     compile project(':library_teaTime')
     compile 'jp.wasabeef:recyclerview-animators:1.2.0@aar'
     compile files('libs/CircularReveal.jar')
+
 }

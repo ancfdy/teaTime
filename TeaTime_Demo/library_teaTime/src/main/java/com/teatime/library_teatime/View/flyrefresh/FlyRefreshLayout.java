@@ -50,7 +50,7 @@ public class FlyRefreshLayout extends PullHeaderLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        // Set default action icon if user not override
+        // 如果用户不覆盖，请设置默认动作图标
         if (getIconView() == null) {
             setActionDrawable(getResources().getDrawable(R.mipmap.ic_send));
         }

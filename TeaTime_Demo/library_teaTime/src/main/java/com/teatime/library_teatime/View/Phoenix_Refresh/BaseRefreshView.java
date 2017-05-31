@@ -70,8 +70,9 @@ public abstract class BaseRefreshView extends Drawable implements Drawable.Callb
     /**
      * Our animation depend on type of current work of refreshing.
      * We should to do different things when it's end of refreshing
+     * 我们的动画取决于当前刷新工作的类型。 我们应该在刷新的时候做不同的事情
      *
-     * @param endOfRefreshing - we will check current state of refresh with this
+     * @param endOfRefreshing - 我们将检查刷新的当前状态
      */
     public void setEndOfRefreshing(boolean endOfRefreshing) {
         mEndOfRefreshing = endOfRefreshing;

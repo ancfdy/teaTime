@@ -54,6 +54,10 @@ public class Flyfreshctivity extends AppCompatActivity implements FlyRefreshLayo
 
     }
 
+    /**
+     * 用于刷新回调，添加耗时操作
+     * @param view
+     */
     @Override
     public void onRefresh(FlyRefreshLayout view) {
         res.add("ssds");
@@ -66,6 +70,10 @@ public class Flyfreshctivity extends AppCompatActivity implements FlyRefreshLayo
         }, 2000);
     }
 
+    /**
+     * 刷新结束回调
+     * @param view
+     */
     @Override
     public void onRefreshAnimationEnd(FlyRefreshLayout view) {
 
