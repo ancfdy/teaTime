@@ -16,7 +16,9 @@
 银行卡管理 BankCheck
 
 checkBankCard       : 校验银行卡卡号是否合法
+
 getBankCardCheckCode: 从不含校验位的银行卡卡号采用 Luhm 校验算法获得校验位
+
 getNameOfBank       : 通过银行卡的前六位确定判断银行开户行及卡种
 
 
