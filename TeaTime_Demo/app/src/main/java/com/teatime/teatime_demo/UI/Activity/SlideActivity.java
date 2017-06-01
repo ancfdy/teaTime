@@ -48,10 +48,6 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-//        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.content_frame, contentFragment)
-//                .commit();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerLayout.setScrimColor(Color.TRANSPARENT);
         linearLayout = (LinearLayout) findViewById(R.id.left_drawer);
@@ -63,7 +59,6 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         });
         fragmentManager=getSupportFragmentManager();
         transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.content_frame, contentFragment).commit();
 
         IntFragment();
 
@@ -72,6 +67,9 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
     }
 
+    /***
+     * 添加fragment
+     */
     private void IntFragment() {
         transaction = fragmentManager.beginTransaction();
         oneFragment=new OneFragment();
@@ -84,7 +82,10 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         transaction.show(oneFragment).hide(twoFragment).hide(reFreshfragment);
         transaction.commit();
     }
+    /*
 
+    添加下拉选项
+     */
     private void createMenuList() {
         SlideMenuItem menuItem0 = new SlideMenuItem(ContentFragment.CLOSE, R.drawable.icn_close);
         list.add(menuItem0);
@@ -104,7 +105,10 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         list.add(menuItem7);
     }
 
-
+    /**
+     * 设置点击下拉的按钮
+     *
+     */
     private void setActionBar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -191,6 +195,13 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
         transaction.commit();
     }
 
+    /**
+     * 监听事件
+     * @param slideMenuItem
+     * @param screenShotable
+     * @param position
+     * @return
+     */
 
 
     @Override

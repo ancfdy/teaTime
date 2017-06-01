@@ -3,8 +3,13 @@ package com.teatime.library_teatime.model;
 
 import com.teatime.library_teatime.interfaces.Resourceble;
 
+
 /**
  * Created by Konstantin on 23.12.2014.
+ */
+
+/**
+ * 侧边栏实体类
  */
 public class SlideMenuItem implements Resourceble {
     private String name;
