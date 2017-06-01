@@ -23,19 +23,19 @@ public class ReFreshFragment extends Fragment implements ScreenShotable {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view=inflater.inflate(R.layout.refresh,container,false);
-
-        mPullToRefreshView = (PullToRefreshView) view.findViewById(R.id.pull_to_refresh);
-        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                mPullToRefreshView.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mPullToRefreshView.setRefreshing(false);
-                    }
-                }, 1000);
-            }
-        });
+//
+//        mPullToRefreshView = (PullToRefreshView) view.findViewById(R.id.pull_to_refresh);
+//        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                mPullToRefreshView.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mPullToRefreshView.setRefreshing(false);
+//                    }
+//                }, 1000);
+//            }
+//        });
 
 
 

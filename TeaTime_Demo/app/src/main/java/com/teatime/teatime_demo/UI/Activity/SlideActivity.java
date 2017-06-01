@@ -213,10 +213,8 @@ public class SlideActivity extends AppCompatActivity implements ViewAnimator.Vie
                 return twoFragment;
             case ContentFragment.PAINT:
 
-                transaction.show(twoFragment);
+                transaction.show(reFreshfragment);
                 transaction.commit();
-//                transaction.show(reFreshfragment);
-//                transaction.commit();
                 return reFreshfragment;
 
             default:

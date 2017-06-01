@@ -19,18 +19,18 @@ public class ReFreshActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.refresh);
-        mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
-        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                mPullToRefreshView.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        mPullToRefreshView.setRefreshing(false);
-                    }
-                }, 1000);
-            }
-        });
+//        mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
+//        mPullToRefreshView.setOnRefreshListener(new PullToRefreshView.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                mPullToRefreshView.postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        mPullToRefreshView.setRefreshing(false);
+//                    }
+//                }, 1000);
+//            }
+//        });
 
     }
 }
