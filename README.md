@@ -13,7 +13,8 @@
 
 功能：
 
-1# API
+1
+# API
 
 ## 银行卡管理 [BankCheck]
     checkBankCard       : 校验银行卡卡号是否合法
